@@ -6,6 +6,7 @@ import CanvasLoader from "../components/CanvasLoader";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants/index";
 import Target from "../components/Target";
+import ReactLogo from "../components/ReactLogo";
 
 function Hero() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -39,6 +40,7 @@ function Hero() {
 
             <group>
               <Target position={sizes.targetPosition} />
+              <ReactLogo position={sizes.reactLogoPosition} />
             </group>
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
