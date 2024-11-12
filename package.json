@@ -19,6 +19,7 @@
     "package": "^1.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-globe.gl": "^2.27.4",
     "react-responsive": "^10.0.0",
     "three": "^0.170.0"
   },
