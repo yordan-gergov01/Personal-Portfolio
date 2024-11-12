@@ -1,4 +1,5 @@
 import Globe from "react-globe.gl";
+import Button from "../components/Button";
 
 function About() {
   return (
@@ -59,6 +60,23 @@ function About() {
               <p className="grid-subtext">
                 I&apos;m based in Veliko Tarnovo, Bulgaria, with remote work
                 available or on-site in other place.
+              </p>
+              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+            </div>
+          </div>
+        </div>
+        <div className="xl:col-span-2 xl:row-span-3">
+          <div className="grid-container">
+            <img
+              src="/assets/grid3.png"
+              alt="grid-3"
+              className="w-full sm:h-[266px] h-fit object-contain"
+            />
+            <div>
+              <p className="grid-headtext">My Passion for Coding</p>
+              <p className="grid-subtext">
+                I love solving problems and building things through code. Coding
+                isn&apos;t just my hobby or profession - it is my passion.
               </p>
             </div>
           </div>
