@@ -20,6 +20,19 @@ function About() {
             </div>
           </div>
         </div>
+
+        <div className="col-span-1 xl:row-span-3">
+          <div className="grid-container">
+            <img
+              src="/assets/mygrid2.png"
+              alt="grid-2"
+              className="w-full sm:w-[276px] h-fit object-contain"
+            />
+            <div>
+              <p className="grid-headtext">Tech Stack</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
