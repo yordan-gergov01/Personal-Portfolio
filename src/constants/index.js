@@ -31,7 +31,7 @@ export const myProjects = [
     texture: "/textures/project/project1.mp4",
     logo: "/assets/project-logo1.png",
     logoStyle: {
-      backgroundColor: "#2A1816",
+      backgroundColor: "#FFFFFF",
       border: "0.2px solid #36201D",
       boxShadow: "0px 0px 60px 0px #AA3C304D",
     },
