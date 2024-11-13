@@ -52,6 +52,11 @@ export const myProjects = [
         name: "Supabase",
         path: "/assets/supabase.png",
       },
+      {
+        id: 4,
+        name: "Vite",
+        path: "/assets/vite-js.png",
+      },
     ],
   },
   {
