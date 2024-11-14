@@ -1,7 +1,22 @@
+import { useState } from "react";
 import { myProjects } from "../constants";
 
+const projectCount = myProjects.length;
+
 function Projects() {
-  const currentProject = myProjects[0];
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+
+  const currentProject = myProjects[selectedProjectIndex];
+
+  function handleNavigation(direction) {
+    setSelectedProjectIndex((prevIndex) => {
+      if (direction === "previous") {
+        return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
+      } else {
+        return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
+      }
+    });
+  }
 
   return (
     <section className="c-space my-20">
@@ -23,7 +38,7 @@ function Projects() {
             <img
               src={currentProject.logo}
               alt="logo"
-              className="w-10 h-10 shadow-sm"
+              className="w-20 h-20 shadow-sm"
             />
           </div>
           <div className="flex flex-col gap-5 text-white-600 my-5">
@@ -51,6 +66,29 @@ function Projects() {
               <p>Check GitHub Repo</p>
               <img src="/assets/arrow-up.png" className="w-3 h-3" alt="arrow" />
             </a>
+          </div>
+
+          <div className="flex justify-between items-center mt-7">
+            <button
+              className="arrow-btn"
+              onClick={() => handleNavigation("previous")}
+            >
+              <img
+                src="/assets/left-arrow.png"
+                alt="left arrow"
+                className="w-4 h-4"
+              />
+            </button>
+            <button
+              className="arrow-btn"
+              onClick={() => handleNavigation("next")}
+            >
+              <img
+                src="/assets/right-arrow.png"
+                alt="right arrow"
+                className="w-4 h-4"
+              />
+            </button>
           </div>
         </div>
       </div>
