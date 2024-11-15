@@ -36,6 +36,11 @@ function Contact() {
       setLoading(false);
 
       alert("Your message has been sent!");
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
     } catch (error) {
       setLoading(false);
 
