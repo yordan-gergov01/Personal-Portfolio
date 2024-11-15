@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const formRef = useRef();
@@ -10,8 +11,39 @@ function Contact() {
     message: "",
   });
 
-  function handleChange() {}
-  function handleSubmit() {}
+  function handleChange({ target: { name, value } }) {
+    setForm({ ...form, [name]: value });
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      await emailjs.send(
+        "service_z4m0nyc",
+        "template_yl8clrg",
+        {
+          from_name: form.name,
+          to_name: "Yordan",
+          from_email: form.email,
+          to_email: "yordansoftskills@gmail.com",
+          message: form.message,
+          reply_to: form.email,
+        },
+        "sVFJthrZvjs3v0eSE"
+      );
+      setLoading(false);
+
+      alert("Your message has been sent!");
+    } catch (error) {
+      setLoading(false);
+
+      console.log(error);
+
+      alert("Something went wrong!");
+    }
+  }
 
   return (
     <section className="c-space my-20">
