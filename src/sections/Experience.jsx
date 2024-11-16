@@ -25,6 +25,12 @@ function Experience() {
 
                     <div className="sm:p-5 px-2.5 py-5">
                       <p className="font-bold text-white-800">{name}</p>
+                      <p className="text-sm mb-5">
+                        {pos} -- {duration}
+                      </p>
+                      <p className="group-hover:text-white transition ease-in-out duration-500">
+                        {title}
+                      </p>
                     </div>
                   </div>
                 )
