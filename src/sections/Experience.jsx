@@ -1,5 +1,9 @@
 import { Canvas } from "@react-three/fiber";
 import { workExperiences } from "../constants";
+import { OrbitControls } from "@react-three/drei";
+import { Suspense } from "react";
+import CanvasLoader from "../components/CanvasLoader";
+import Developer from "../components/Developer";
 
 function Experience() {
   return (
@@ -9,7 +13,15 @@ function Experience() {
 
         <div className="work-container">
           <div className="work-canvas">
-            <Canvas></Canvas>
+            <Canvas>
+              <ambientLight intensity={7} />
+              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+              <directionalLight position={[10, 10, 10]} intensity={1} />
+              <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
+              <Suspense fallback={<CanvasLoader />}>
+                <Developer />
+              </Suspense>
+            </Canvas>
           </div>
           <div className="work-content">
             <div className="sm:py-10 py-5 sm:px-5 px-2.5">
