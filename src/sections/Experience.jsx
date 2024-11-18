@@ -1,7 +1,8 @@
-import { Canvas } from "@react-three/fiber";
-import { workExperiences } from "../constants";
-import { OrbitControls } from "@react-three/drei";
 import { Suspense, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+
+import { workExperiences } from "../constants";
 import CanvasLoader from "../components/CanvasLoader";
 import Developer from "../components/Developer";
 

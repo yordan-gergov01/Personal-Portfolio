@@ -1,14 +1,11 @@
-import { Canvas } from "@react-three/fiber";
-import { PerspectiveCamera } from "@react-three/drei";
-import HackerRoom from "../components/HackerRoom";
 import { Suspense } from "react";
-import CanvasLoader from "../components/CanvasLoader";
+import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
+import { PerspectiveCamera } from "@react-three/drei";
+
+import HackerRoom from "../components/HackerRoom";
+import CanvasLoader from "../components/CanvasLoader";
 import { calculateSizes } from "../constants/index";
-import Target from "../components/Target";
-import ReactLogo from "../components/ReactLogo";
-import Cube from "../components/Cube";
-import Rings from "../components/Rings";
 import HeroCamera from "../components/HeroCamera";
 import Button from "../components/Button";
 
@@ -26,7 +23,7 @@ function Hero() {
           Hi, I am Yordan <span className="waving-hand">👋🏻</span>
         </p>
         <p className="hero_tag text-gray_gradient">
-          Building Products & Brands
+          Welcome to my codding journey
         </p>
       </div>
 
@@ -44,12 +41,6 @@ function Hero() {
               />
             </HeroCamera>
 
-            <group>
-              <Target position={sizes.targetPosition} />
-              <ReactLogo position={sizes.reactLogoPosition} />
-              <Cube position={sizes.cubePosition} />
-              <Rings position={sizes.ringPosition} />
-            </group>
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>
