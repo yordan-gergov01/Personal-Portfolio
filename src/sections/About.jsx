@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Globe from "react-globe.gl";
 
-import Button from "../components/Button";
-
 function About() {
   const [hasCopied, setHasCopied] = useState(false);
 
@@ -75,7 +73,6 @@ function About() {
                 I&apos;m based in Veliko Tarnovo, Bulgaria, with remote work
                 available or on-site in other place.
               </p>
-              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
             </div>
           </div>
         </div>
